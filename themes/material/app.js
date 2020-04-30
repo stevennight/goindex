@@ -46,10 +46,9 @@ function nav(path){
     var p = '/';
     if(arr.length > 0){
         for(i in arr){
-            var n = arr[i];
-		console.log(n);
-            n = decodeURIComponent(n);
-            p += encodeURIComponent(n)+'/';
+            var nameEncode = arr[i];
+            n = decodeURIComponent(nameEncode);
+            p += nameEncode+'/';
             if(n == ''){
                 break;
             }
