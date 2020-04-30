@@ -34,7 +34,7 @@ function render(path){
 
 // 渲染 title
 function title(path){
-    path = decodeURI(path);
+    path = decodeURIComponent(path);
     $('title').html(document.siteName+' - '+path);
 }
 
@@ -47,7 +47,7 @@ function nav(path){
     if(arr.length > 0){
         for(i in arr){
             var n = arr[i];
-            n = decodeURI(n);
+            n = decodeURIComponent(n);
             p += n+'/';
             if(n == ''){
                 break;
