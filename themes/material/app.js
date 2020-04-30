@@ -113,7 +113,7 @@ function list_files(path,files){
     html = "";
     for(i in files){
         var item = files[i];
-        var p = path+item.name+'/';
+        var p = path+encodeURIComponent(item.name)+'/';
         if(item['size']==undefined){
             item['size'] = "";
         }
